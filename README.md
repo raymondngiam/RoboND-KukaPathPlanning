@@ -6,14 +6,27 @@ Plan a path through a maze for an industrial KUKA Manipulator Arm!
 
 ### Dependencies
 
-- <a href="https://github.com/KITrobotics/rll_sdk">rll_sdk</a>: commit 8fed72c
-
 - ROS Kinetic
 
 ### Installation
 
 ``` bash
-$ git clone https://github.com/raymondngiam/RoboND-KukaPathPlanning.git
+$ cd <repo-root>
 $ git submodule update --init --recursive
+```
+
+### Build
+
+``` bash
+$ cd <repo-root>/catkin_ws
+$ rosdep install --from-paths ./src --ignore-pacakges-from-source -y
+$ catkin_make
+```
+
+### Running the program
+
+```$  bash
+$ cd <repo-root>/catkin_ws/src/rll_planning_project/scripts/
+$ sh start_project.sh
 ```
 
